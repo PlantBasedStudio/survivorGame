@@ -14,7 +14,7 @@ func _process(delta):
 
 func acquire_target():
 	var player_nodes = get_tree().get_nodes_in_group("Player")
-	#Case there is multiple objects into the group Player
+	#Be sure to always focus the same target
 	if player_nodes.size() > 0:
 		var player = player_nodes[0] as Node2D
 		target_position = player.global_position
